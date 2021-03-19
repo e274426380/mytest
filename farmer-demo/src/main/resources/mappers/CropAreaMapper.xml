@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaorange.mapper.CropAreaMapper">
+  <resultMap id="BaseResultMap" type="com.yaorange.entity.CropArea">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ca_id" jdbcType="INTEGER" property="caId" />
+    <result column="ca_date" jdbcType="INTEGER" property="caDate" />
+    <result column="grain_crops" jdbcType="INTEGER" property="grainCrops" />
+    <result column="cotton" jdbcType="INTEGER" property="cotton" />
+    <result column="flax" jdbcType="INTEGER" property="flax" />
+    <result column="suger" jdbcType="INTEGER" property="suger" />
+    <result column="tobacco" jdbcType="INTEGER" property="tobacco" />
+    <result column="medicinal" jdbcType="INTEGER" property="medicinal" />
+    <result column="oil" jdbcType="INTEGER" property="oil" />
+    <result column="etc" jdbcType="INTEGER" property="etc" />
+  </resultMap>
+    <select id="selectColumn" resultType="java.util.Map">
+    select column_name name,column_comment comment from information_schema.columns
+       where table_name='crop_area'
+          and not column_name = 'ca_id'
+          and not column_name = 'ca_date'
+    </select>
+</mapper>

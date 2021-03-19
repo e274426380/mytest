@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaorange.mapper.TotalProductionMapper">
+  <resultMap id="BaseResultMap" type="com.yaorange.entity.TotalProduction">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="tp_id" jdbcType="INTEGER" property="tpId" />
+    <result column="tp_date" jdbcType="INTEGER" property="tpDate" />
+    <result column="animal_fishery" jdbcType="INTEGER" property="animalFishery" />
+    <result column="farming" jdbcType="INTEGER" property="farming" />
+    <result column="forestry" jdbcType="INTEGER" property="forestry" />
+    <result column="animal_husbandry" jdbcType="INTEGER" property="animalHusbandry" />
+    <result column="fishery" jdbcType="INTEGER" property="fishery" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaorange.mapper.OpenerNumberMapper">
+  <resultMap id="BaseResultMap" type="com.yaorange.entity.OpenerNumber">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="on_id" jdbcType="INTEGER" property="onId" />
+    <result column="on_date" jdbcType="INTEGER" property="onDate" />
+    <result column="january" jdbcType="INTEGER" property="january" />
+    <result column="february" jdbcType="INTEGER" property="february" />
+    <result column="march" jdbcType="INTEGER" property="march" />
+    <result column="april" jdbcType="INTEGER" property="april" />
+    <result column="may" jdbcType="INTEGER" property="may" />
+    <result column="june" jdbcType="INTEGER" property="june" />
+    <result column="july" jdbcType="INTEGER" property="july" />
+    <result column="august" jdbcType="INTEGER" property="august" />
+    <result column="september" jdbcType="INTEGER" property="september" />
+    <result column="october" jdbcType="INTEGER" property="october" />
+    <result column="november" jdbcType="INTEGER" property="november" />
+    <result column="december" jdbcType="INTEGER" property="december" />
+  </resultMap>
+</mapper>

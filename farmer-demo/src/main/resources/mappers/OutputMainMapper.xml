@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaorange.mapper.OutputMainMapper">
+  <resultMap id="BaseResultMap" type="com.yaorange.entity.OutputMain">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="om_id" jdbcType="INTEGER" property="omId" />
+    <result column="om_date" jdbcType="INTEGER" property="omDate" />
+    <result column="om_grain_crops" jdbcType="INTEGER" property="omGrainCrops" />
+    <result column="om_cotton" jdbcType="INTEGER" property="omCotton" />
+    <result column="om_oil" jdbcType="INTEGER" property="omOil" />
+    <result column="om_suger" jdbcType="INTEGER" property="omSuger" />
+    <result column="om_meat" jdbcType="INTEGER" property="omMeat" />
+    <result column="om_poultry" jdbcType="INTEGER" property="omPoultry" />
+    <result column="om_dairy" jdbcType="INTEGER" property="omDairy" />
+    <result column="om_aqua" jdbcType="INTEGER" property="omAqua" />
+    <result column="om_vegetable" jdbcType="INTEGER" property="omVegetable" />
+    <result column="om_fruit" jdbcType="INTEGER" property="omFruit" />
+  </resultMap>
+</mapper>

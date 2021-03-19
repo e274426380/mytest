@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yaorange.mapper.IncomeConsumMapper">
+  <resultMap id="BaseResultMap" type="com.yaorange.entity.IncomeConsum">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ic_id" jdbcType="INTEGER" property="icId" />
+    <result column="ic_date" jdbcType="INTEGER" property="icDate" />
+    <result column="ic_income" jdbcType="INTEGER" property="icIncome" />
+    <result column="ic_pay" jdbcType="INTEGER" property="icPay" />
+    <result column="ic_income_date" jdbcType="REAL" property="icIncomeRate" />
+    <result column="ic_pay_date" jdbcType="REAL" property="icPayRate" />
+  </resultMap>
+    <select id="selectIncomeConsumData" resultType="java.util.Map">
+      select ic_income,ic_pay,ic_income_rate,ic_pay_rate from income_consum ic
+      where ic_date=#{icDate}
+    </select>
+  <!--查询字段名，且不查询主键-->
+  <select id="selectColumn" resultType="java.util.Map">
+     select column_name name,column_comment comment from information_schema.columns
+       where table_name='income_consum' and column_name not like 'ic_id'
+  </select>
+  <select id="selectIncomeConsumAll" resultType="java.util.Map">
+     select ic_income,ic_pay,ic_income_rate,ic_pay_rate from income_consum ic
+  </select>
+  <select id="selectDateAll" resultType="java.lang.Integer">
+    select ic_date from income_consum ic
+  </select>
+</mapper>
